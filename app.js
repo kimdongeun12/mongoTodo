@@ -20,17 +20,23 @@ app.use(bodyParser.json());
 const router = require("./routes/index");
 app.use(router);
 
-mongoose.connect("mongodb://admin:adimin@localhost:27017/node?authSource=admin", {useNewUrlParser: true, useUnifiedTopology: true}, function(err , database){ // mongodb의 데이터 호출 
+// mongoose.connect('mongodb://localhost:27017/').then(() => {
+// console.log("Connected to Database");
+// }).catch((err) => {
+// console.log("Not Connected to Database ERROR! ", err);
+// });
+
+    
+mongoose.connect("mongodb+srv://admin:admin@cluster0.0yqsr.mongodb.net/node?authSource=admin", {useNewUrlParser: true, useUnifiedTopology: true}, function(err){ // mongodb의 데이터 호출 
     if(err){
         console.error("mongoDB Connection Error!", err);
     }
     console.log("mongoDB Connected!");
-    console.log(database)
-    // console.log(database);
     // Server Open
     app.listen(3000, function(){
         console.log("Server listening on port 3000!");
     });
+    
 });
 
 

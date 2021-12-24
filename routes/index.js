@@ -5,7 +5,8 @@ const router = express.Router();
 // Todo Router
 const TodoRouter = require('./todo');
 
+
 // Refactoring
-router.use('/todo', TodoRouter); 
+router.use('/todo', TodoRouter); // http://localhost:3000/todo 로 라우팅
 
 module.exports = router;

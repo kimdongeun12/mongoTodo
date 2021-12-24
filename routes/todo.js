@@ -1,8 +1,11 @@
+
 const express = require("express"); //  서버 구동하는 프레임워크
 const app = express();
 const router = express.Router();
 
+
 const controller = require("../controllers/todo"); // 컨트롤 하는 메소드 모음
+
 
 // main
 router.get('/', controller.get);
