@@ -5,7 +5,8 @@ var moment = require('moment-timezone');
 moment.tz.setDefault("Asia/Seoul");
 
 // Controller - 서비스 로직
-
+let todoTask = new TodoTask({})
+let detailSchema = new TodoTask({})
 // 첫 페이지
 exports.get = function(req, res){
     console.log("------------!!Todo!!------------");
@@ -17,7 +18,7 @@ exports.get = function(req, res){
 // 작성
 exports.write = async function(req, res){
     try{
-        const todoTask = new TodoTask({
+        todoTask = new TodoTask({
             content: req.body.content,
             date: moment().format("YYYY-MM-DD HH:mm:ss")
         });

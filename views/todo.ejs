@@ -33,7 +33,7 @@
             </li>
             <% } %>
             <li class="todo-item">
-                <div class="todo-item-content" id="content">&emsp;<%= tasks.content %> &emsp; </div>
+                <div class="todo-item-content" id="content"><%= tasks.content %></div>
                 <div class="edit-btn">
                     <button type="button" id="img" onclick="location.href='/todo/edit/<%= tasks._id %>'"><img src="../public/images/edit.png" width="20px"></button>
                     <button type="button" id="img" onclick="location.href='/todo/remove/<%= tasks._id %>'"><img src="../public/images/remove.png" width="20px"></button>
